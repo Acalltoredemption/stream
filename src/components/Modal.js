@@ -8,14 +8,13 @@ const Modal = props => {
         <div className="ui dimmer modals visible active" onClick={() => history.push('/')}>
             <div onClick={(e) => e.stopPropagation()}className="ui standard modal visible active">
                 <div className="header">
-                    Delete Stream
+                    {props.header}
                 </div>
                 <div className="content">
-                    Are you sure you want to delete this stream?
+                   {props.content}
                 </div>
                 <div className="actions">
-                    <button className="ui button">Cancel</button>
-                    <button className="ui primary button">Delete</button>
+                {props.actions}
                 </div>
             </div>
         </div>,
